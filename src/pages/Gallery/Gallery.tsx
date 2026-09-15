@@ -80,7 +80,7 @@ function Gallery() {
                 {/* Image Container with Zoom Effect */}
                 <div className="relative overflow-hidden w-full h-72">
                   <img
-                    src={`http://localhost:5000/uploads/gallery/${image.imageUrl}`}
+                    src={`https://api.skvclinic.com/uploads/gallery/${image.imageUrl}`}
                     alt={image.title}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                     loading="lazy"

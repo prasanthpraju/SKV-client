@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/dashboard", {
+      const response = await axios.get("https://api.skvclinic.com/api/dashboard", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStats(response.data.data);

@@ -103,7 +103,7 @@ function Gallery() {
         {images.map((img) => (
           <div key={img.id} className="border rounded-lg overflow-hidden">
             <img
-              src={`http://localhost:5000/uploads/gallery/${img.imageUrl}`}
+              src={`https://api.skvclinic.com/uploads/gallery/${img.imageUrl}`}
               alt={img.title}
               className="w-full h-52 object-cover"
             />

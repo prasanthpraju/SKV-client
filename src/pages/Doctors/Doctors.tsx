@@ -80,7 +80,7 @@ function Doctors() {
       medicalSpecialty: doctor.specialization,
       description: doctor.qualification,
       image: doctor.imageUrl
-        ? `http://localhost:5000/uploads/doctors/${doctor.imageUrl}`
+        ? `https://api.skvclinic.com/uploads/doctors/${doctor.imageUrl}`
         : undefined,
     }));
 
@@ -90,7 +90,7 @@ function Doctors() {
         name: ceoData.fullName,
         // jobTitle: ceoData.role || "CEO",
         image: ceoData.imageUrl
-          ? `http://localhost:5000/uploads/doctors/${ceoData.imageUrl}`
+          ? `https://api.skvclinic.com/uploads/doctors/${ceoData.imageUrl}`
           : undefined,
         medicalSpecialty: ceoData.specialization,
         description: ceoData.qualification,
@@ -172,7 +172,7 @@ function Doctors() {
                   <img
                     src={
                       ceoData.imageUrl
-                        ? `http://localhost:5000/uploads/doctors/${ceoData.imageUrl}`
+                        ? `https://api.skvclinic.com/uploads/doctors/${ceoData.imageUrl}`
                         : `https://ui-avatars.com/api/?name=${encodeURIComponent(ceoData.fullName)}&background=0D2A24&color=fff&size=512`
                     }
                     alt={ceoData.fullName}
@@ -267,7 +267,7 @@ function Doctors() {
                       <img
                         src={
                           doctor.imageUrl
-                            ? `http://localhost:5000/uploads/doctors/${doctor.imageUrl}`
+                            ? `https://api.skvclinic.com/uploads/doctors/${doctor.imageUrl}`
                             : `https://ui-avatars.com/api/?name=${encodeURIComponent(doctor.fullName)}&background=F1F5F9&color=64748B&size=512`
                         }
                         alt={`${doctor.fullName} - ${doctor.specialization}`}

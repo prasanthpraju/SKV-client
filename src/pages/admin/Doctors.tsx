@@ -316,7 +316,7 @@ const Doctors = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
               <div className="h-32 w-32 rounded-full overflow-hidden border-4 border-white/10 bg-slate-800 shadow-2xl flex-shrink-0">
                 <img
-                  src={`http://localhost:5000/uploads/doctors/${ceoDoctor.imageUrl}`}
+                  src={`https://api.skvclinic.com/uploads/doctors/${ceoDoctor.imageUrl}`}
                   alt={ceoDoctor.fullName}
                   className="h-full w-full object-cover"
                   onError={(e) => {
@@ -362,7 +362,7 @@ const Doctors = () => {
                   
                   <div className="h-28 w-28 rounded-full overflow-hidden border-4 border-slate-50 bg-slate-100 shadow-inner mb-6 group-hover:scale-105 transition-transform duration-500">
                     <img
-                      src={`http://localhost:5000/uploads/doctors/${doctor.imageUrl}`}
+                      src={`https://api.skvclinic.com/uploads/doctors/${doctor.imageUrl}`}
                       alt={doctor.fullName}
                       className="h-full w-full object-cover"
                       onError={(e) => {
