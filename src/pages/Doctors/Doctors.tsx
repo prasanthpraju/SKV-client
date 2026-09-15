@@ -31,14 +31,14 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { type: "spring", stiffness: 300, damping: 24 } 
-  },
-};
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 30 },
+//   visible: { 
+//     opacity: 1, 
+//     y: 0, 
+//     transition: { type: "spring", stiffness: 300, damping: 24 } 
+//   },
+// };
 
 function Doctors() {
   const [doctors, setDoctors] = useState<Doctor[]>([]);
