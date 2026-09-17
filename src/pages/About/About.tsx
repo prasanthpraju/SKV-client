@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import aboutImage from  "../../assets/images/about.jpeg"
 // import { Helmet } from 'react-helmet';
@@ -8,7 +8,7 @@ import {
   FiHeart, 
   FiClock, 
   FiCheckCircle, 
-  FiArrowRight,
+  // FiArrowRight,
   FiUserPlus,
   FiHome,
   FiTarget,

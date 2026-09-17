@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { 
   FiPhoneCall, 
   FiActivity, 
@@ -7,7 +7,7 @@ import {
   FiClock, 
   FiHeart,
   FiFileText,
-  FiArrowRight,
+  // FiArrowRight,
   FiShield
 } from "react-icons/fi";
 
