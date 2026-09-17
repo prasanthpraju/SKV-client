@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import aboutImage from  "../../assets/images/about.jpeg"
+import aboutImage from "../../assets/images/about.jpeg";
 import { 
   FiActivity, 
   FiHeart, 
