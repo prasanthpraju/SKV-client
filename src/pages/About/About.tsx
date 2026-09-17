@@ -1,6 +1,7 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import aboutImage from  "../../assets/images/about.jpeg"
 // import { Helmet } from 'react-helmet';
 import { 
   FiActivity, 
@@ -13,6 +14,7 @@ import {
   FiTarget,
   FiEye,
 } from 'react-icons/fi';
+
 
 const About = () => {
   // Generate Schema.org JSON-LD for Search Engines
@@ -62,7 +64,7 @@ const About = () => {
             >
               <div className="group relative rounded-3xl overflow-hidden shadow-sm aspect-[4/5] w-full bg-gray-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" 
+                  src={aboutImage} 
                   alt="SKV Clinic Facility" 
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -71,17 +73,7 @@ const About = () => {
               </div>
               
               {/* Floating Badge */}
-              <div className="absolute -bottom-8 -left-4 lg:-left-8 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-gray-100 max-w-[240px] hover:-translate-y-2 transition-all duration-500">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 text-secondary rounded-full flex items-center justify-center">
-                    <FiHeart className="w-6 h-6 fill-current" />
-                  </div>
-                  <div>
-                    <p className="text-secondary font-bold text-xs uppercase tracking-wider mb-1">New</p>
-                    <p className="text-primary font-bold text-sm leading-tight">Modern Healthcare Patient First Care</p>
-                  </div>
-                </div>
-              </div>
+    
             </motion.div>
 
             {/* Right: Content */}
@@ -132,15 +124,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div>
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-secondary hover:shadow-lg hover:-translate-y-1 transition-all duration-300 active:scale-[0.98]"
-                >
-                  Learn More
-                  <FiArrowRight />
-                </Link>
-              </div>
+              
             </motion.div>
           </div>
 

@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                   Skip the wait and schedule your visit online.
                 </p>
                 <Link
-                  to="/appointment"
+                  to="/book-appointment"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 font-semibold text-white shadow-md transition-all duration-300 hover:bg-white hover:text-primary hover:shadow-lg hover:-translate-y-1 active:scale-[0.98]"
                 >
                   <FaCalendarCheck />

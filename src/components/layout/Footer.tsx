@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
   FaInstagram,
   FaWhatsapp,
   FaPhoneAlt,
@@ -9,17 +8,14 @@ import {
   FaMapMarkerAlt,
   FaArrowUp,
   FaLinkedin,
-  FaHeart // <-- Added Heart Icon
+  FaHeart
 } from "react-icons/fa";
-// import logo from "../../assets/images/logo.png";
 
-// 1. Define the TypeScript interface for your links
 interface QuickLink {
   name: string;
   path: string;
 }
 
-// 2. Apply the interface to your array
 const QUICK_LINKS: QuickLink[] = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
@@ -32,7 +28,6 @@ const QUICK_LINKS: QuickLink[] = [
 const Footer: React.FC = () => {
   const currentYear: number = new Date().getFullYear();
 
-  // Function to manually scroll to the top for the "Back to Top" button
   const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
@@ -41,36 +36,31 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-primary text-white relative">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-primary text-white relative border-t border-primary/20">
+      {/* Main Footer Content - Premium Spacious Grid */}
+      <div className="mx-auto grid max-w-[1400px] gap-12 px-6 py-20 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
         
         {/* Clinic Info */}
-        <div className="flex flex-col space-y-4">
-          <div className="flex items-center gap-3">
-            {/* <img
-              src={logo}
-              alt="SKV Clinic Logo"
-              className="h-14 w-14 rounded-full bg-white p-1 object-cover"
-              loading="lazy"
-            /> */}
-            <div>
-              <h2 className="text-2xl font-bold tracking-wide">SKV Clinic</h2>
-              <p className="text-sm font-medium text-gray-300">
-                Care • Compassion • Commitment
-              </p>
-            </div>
+        <div className="flex flex-col space-y-4 text-center sm:text-left items-center sm:items-start lg:col-span-4 lg:pr-10">
+          <div>
+            {/* Original Bold Font */}
+            <h2 className="text-2xl font-bold tracking-wide">SKV Clinic</h2>
+            <p className="text-sm font-medium text-gray-300 mt-1">
+              Care • Compassion • Commitment
+            </p>
           </div>
-          <p className="text-gray-300 leading-relaxed">
-            Providing trusted and compassionate healthcare with experienced doctors and modern medical facilities.
+          <p className="text-gray-300 leading-relaxed max-w-sm mt-2">
+            Providing trusted and compassionate healthcare with experienced doctors, modern medical facilities, and a dedication to your well-being.
           </p>
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="mb-5 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-1/2 after:bg-secondary">
+        <div className="text-center sm:text-left lg:col-span-2 lg:col-start-6">
+          {/* Original Header with Border/Underline */}
+          <h3 className="mb-6 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-1/2 sm:after:left-0 after:-translate-x-1/2 sm:after:translate-x-0 after:h-[2px] after:w-1/2 after:bg-secondary">
             Quick Links
           </h3>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {QUICK_LINKS.map((link: QuickLink) => (
               <li key={link.name}>
                 <Link
@@ -85,33 +75,36 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact */}
-        <div>
-          <h3 className="mb-5 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-1/2 after:bg-secondary">
+        <div className="text-center sm:text-left flex flex-col items-center sm:items-start lg:col-span-3">
+          <h3 className="mb-6 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-1/2 sm:after:left-0 after:-translate-x-1/2 sm:after:translate-x-0 after:h-[2px] after:w-1/2 after:bg-secondary">
             Contact
           </h3>
-          <div className="space-y-4 text-gray-200">
-            {/* Clickable Phone Link */}
+          <div className="space-y-5 text-gray-200 flex flex-col items-center sm:items-start">
             <a 
               href="tel:+918300384823" 
-              className="flex items-start gap-3 transition-colors duration-300 hover:text-secondary group"
+              className="flex items-center gap-4 transition-colors duration-300 hover:text-secondary group"
             >
-              <FaPhoneAlt className="mt-1 text-secondary group-hover:animate-pulse" />
-              <span>+91 8300 384 823</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 group-hover:border-secondary/50 transition-colors">
+                <FaPhoneAlt size={12} className="text-secondary group-hover:animate-pulse" />
+              </span>
+              <span className="tracking-wide">+91 8300 384 823</span>
             </a>
 
-            {/* Clickable Email Link */}
             <a 
               href="mailto:skvclinicktg@gmail.com" 
-              className="flex items-start gap-3 transition-colors duration-300 hover:text-secondary group"
+              className="flex items-center gap-4 transition-colors duration-300 hover:text-secondary group"
             >
-              <FaEnvelope className="mt-1 text-secondary" />
-              <span>skvclinicktg@gmail.com</span>
+              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 group-hover:border-secondary/50 transition-colors">
+                <FaEnvelope size={12} className="text-secondary" />
+              </span>
+              <span className="tracking-wide">skvclinicktg@gmail.com</span>
             </a>
 
-            {/* Address */}
-            <div className="flex items-start gap-3">
-              <FaMapMarkerAlt className="mt-1 text-secondary shrink-0" />
-              <span>
+            <div className="flex items-start gap-4 text-left group">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/20 transition-colors mt-1">
+                <FaMapMarkerAlt size={12} className="text-secondary" />
+              </span>
+              <span className="leading-relaxed tracking-wide pt-1">
                 31/34 Main Bazaar,<br />
                 Kotagiri - 643217
               </span>
@@ -120,22 +113,17 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Social */}
-        <div>
-          <h3 className="mb-5 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-1/2 after:bg-secondary">
+        <div className="text-center sm:text-left flex flex-col items-center sm:items-start lg:col-span-3 lg:items-end">
+          <h3 className="mb-6 text-xl font-semibold relative inline-block after:content-[''] after:absolute after:-bottom-1 after:left-1/2 sm:after:left-0 after:-translate-x-1/2 sm:after:translate-x-0 after:h-[2px] after:w-1/2 after:bg-secondary">
             Follow Us
           </h3>
-          <div className="flex gap-4">
+          <div className="flex gap-3 justify-center sm:justify-start">
             <a
-              href="#"
-              aria-label="Facebook"
-              className="rounded-full bg-white p-3 text-primary shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-secondary hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary"
-            >
-              <FaFacebookF size={18} />
-            </a>
-            <a
-              href="#"
+              href="https://www.instagram.com/skvclinic?utm_source=qr&stkn=ZnRrcXZmaGJxbG9i"
+              target="_blank"
+              rel="noreferrer noopener"
               aria-label="Instagram"
-              className="rounded-full bg-white p-3 text-primary shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-secondary hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary"
+              className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-transparent text-white transition-all duration-300 hover:-translate-y-1 hover:border-secondary hover:text-secondary hover:shadow-[0_0_15px_rgba(184,147,97,0.2)]"
             >
               <FaInstagram size={18} />
             </a>
@@ -144,7 +132,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="WhatsApp"
-              className="rounded-full bg-white p-3 text-primary shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-secondary hover:text-white hover:shadow-md focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary"
+              className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-transparent text-white transition-all duration-300 hover:-translate-y-1 hover:border-secondary hover:text-secondary hover:shadow-[0_0_15px_rgba(184,147,97,0.2)]"
             >
               <FaWhatsapp size={18} />
             </a>
@@ -152,27 +140,32 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Copyright, Developer & Back to Top Footer */}
-      <div className="border-t border-white/20 bg-black/10 py-6 px-6">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-gray-300 md:flex-row">
+      {/* Elegant Divider */}
+      <div className="w-full px-6">
+        <div className="mx-auto max-w-[1400px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      </div>
+
+      {/* Copyright & Developer Bar */}
+      <div className="py-6 px-6 bg-black/10">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-6 text-sm text-gray-300 md:flex-row">
           
           {/* Left: Copyright */}
-          <p className="text-center md:text-left">
+          <p className="text-center md:text-left order-3 md:order-1">
             © {currentYear} SKV Clinic. All Rights Reserved.
           </p>
           
-          {/* Center: Developer Credit with Heart */}
-          <div className="flex items-center gap-1.5 text-[15px]">
+          {/* Center: Developer Credit */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 order-2 text-center">
             <span>Designed & Developed with</span>
-            <FaHeart className="text-red-500 animate-pulse" size={16} />
+            <FaHeart className="text-red-500 animate-pulse mx-1" size={14} />
             <span>by</span>
             <a
               href="https://www.linkedin.com/in/prasanth-j-7a8985304"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 ml-1 text-secondary hover:text-white hover:underline transition-all duration-300 font-semibold tracking-wide"
+              className="flex items-center gap-1.5 ml-1 text-gray-200 hover:text-secondary hover:underline transition-all duration-300 font-medium tracking-wide"
             >
-              <FaLinkedin size={18} />
+              <FaLinkedin size={16} />
               <span>Prasanth</span>
             </a>
           </div>
@@ -180,11 +173,13 @@ const Footer: React.FC = () => {
           {/* Right: Back to Top Button */}
           <button 
             onClick={scrollToTop}
-            className="flex items-center gap-2 hover:text-secondary transition-colors duration-300 focus:outline-none"
+            className="group flex items-center gap-2 hover:text-secondary transition-colors duration-300 focus:outline-none order-1 md:order-3 bg-white/5 md:bg-transparent px-4 py-2 md:p-0 rounded-full md:rounded-none"
             aria-label="Scroll to top"
           >
             <span>Back to top</span>
-            <FaArrowUp className="text-secondary" />
+            <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 md:border-transparent md:bg-white/10 group-hover:bg-secondary/20 group-hover:border-secondary/30 transition-all">
+              <FaArrowUp size={12} className="text-secondary" />
+            </span>
           </button>
 
         </div>

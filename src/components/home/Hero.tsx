@@ -12,7 +12,7 @@ import {
 } from "react-icons/fi";
 
 // Importing your actual doctor image based on your VS Code folder structure
-import doctorImg from "../../assets/images/docter.jpeg";
+import doctorImg from "../../assets/images/about.jpeg";
 
 // Define the interface for the facilities array
 interface Facility {
@@ -81,21 +81,7 @@ const Hero: React.FC = () => {
                 Comprehensive care for your entire family. Equipped with advanced ECG, fully-featured diagnostic labs, and dedicated specialists.
               </p>
 
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="tel:+919344527595"
-                  className="group/btn relative overflow-hidden bg-[#153C33] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-[0_10px_20px_-10px_rgba(21,60,51,0.5)] transition-transform hover:-translate-y-1 active:scale-95"
-                >
-                  <FiPhoneCall className="text-[#B89361] group-hover/btn:rotate-12 transition-transform" />
-                  <span className="relative z-10">93445 27595</span>
-                </a>
-                <Link 
-                  to="/facilities" 
-                  className="px-8 py-4 rounded-2xl font-bold text-[#153C33] bg-transparent border-2 border-[#153C33]/20 hover:border-[#153C33] hover:bg-white transition-all active:scale-95 flex items-center justify-center gap-2 group/link"
-                >
-                  Explore Clinic <FiArrowRight className="group-hover/link:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+             
             </div>
           </div>
 
@@ -103,24 +89,13 @@ const Hero: React.FC = () => {
           <div className="md:col-span-12 lg:col-span-5 row-span-2 rounded-[2rem] relative overflow-hidden shadow-md min-h-[350px] bg-[#153C33] group">
             <img 
               src={doctorImg} 
-              alt="Chief Consultant at SKV Clinic" 
+                
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[3s] group-hover:scale-105"
             />
             
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#153C33]/90 via-[#153C33]/40 to-transparent" />
 
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.15)] transform transition-transform duration-500 group-hover:-translate-y-2 hover:bg-white/20 cursor-default">
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-[#B89361] flex items-center justify-center text-white shadow-inner">
-                    <FiShield className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-base tracking-wide">Chief Consultant</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           {/* --- BENTO 3: Modern Care - Solid Background (Spans 4 cols) --- */}
