@@ -1,20 +1,16 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
+import React from 'react';
 import { motion } from 'framer-motion';
 import aboutImage from  "../../assets/images/about.jpeg"
-// import { Helmet } from 'react-helmet';
 import { 
   FiActivity, 
   FiHeart, 
   FiClock, 
   FiCheckCircle, 
-  // FiArrowRight,
   FiUserPlus,
   FiHome,
   FiTarget,
   FiEye,
 } from 'react-icons/fi';
-
 
 const About = () => {
   // Generate Schema.org JSON-LD for Search Engines
@@ -34,7 +30,6 @@ const About = () => {
 
   return (
     <>
-      {/* <Helmet> */}
         <title>About Us | SKV Clinic</title>
         <meta 
           name="description" 
@@ -43,7 +38,6 @@ const About = () => {
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())}
         </script>
-      {/* </Helmet> */}
 
       <section className="relative overflow-hidden bg-white py-24 sm:py-32">
         {/* Subtle background gradient for depth */}
@@ -71,9 +65,6 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none" />
               </div>
-              
-              {/* Floating Badge */}
-    
             </motion.div>
 
             {/* Right: Content */}
@@ -123,8 +114,6 @@ const About = () => {
                   <p className="text-text/80 text-sm">Clean and welcoming environment.</p>
                 </div>
               </div>
-
-              
             </motion.div>
           </div>
 

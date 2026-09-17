@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
 import { 
   FiPhoneCall, 
   FiActivity, 
@@ -7,7 +6,6 @@ import {
   FiClock, 
   FiHeart,
   FiFileText,
-  // FiArrowRight,
   FiShield
 } from "react-icons/fi";
 
@@ -81,7 +79,6 @@ const Hero: React.FC = () => {
                 Comprehensive care for your entire family. Equipped with advanced ECG, fully-featured diagnostic labs, and dedicated specialists.
               </p>
 
-             
             </div>
           </div>
 
@@ -89,13 +86,11 @@ const Hero: React.FC = () => {
           <div className="md:col-span-12 lg:col-span-5 row-span-2 rounded-[2rem] relative overflow-hidden shadow-md min-h-[350px] bg-[#153C33] group">
             <img 
               src={doctorImg} 
-                
+              alt="SKV Clinic Doctor"
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-[3s] group-hover:scale-105"
             />
             
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#153C33]/90 via-[#153C33]/40 to-transparent" />
-
-            
           </div>
 
           {/* --- BENTO 3: Modern Care - Solid Background (Spans 4 cols) --- */}
